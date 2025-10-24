@@ -1,0 +1,10 @@
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /Users/jamesanderson/Documents/UNCC/Fall-2025/ITCS-6166_Computer_Comm_&_Networks/Project/Project_Code:/home/jovyan/Notebooks
+    ports:
+      - "8888:8888"
+    command: "start-notebook.sh --NotebookApp.token="
